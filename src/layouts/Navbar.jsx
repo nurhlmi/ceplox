@@ -3,7 +3,7 @@ import { MenuRounded } from '@mui/icons-material';
 import { AppBar, Button, Container, IconButton, Stack, Typography } from '@mui/material';
 import Logo from '../components/Logo';
 
-const menu = ['Home', 'Features', 'FAQ'];
+const menu = ['Home', 'Fitur', 'FAQ'];
 
 export default function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);

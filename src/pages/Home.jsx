@@ -1,13 +1,13 @@
-import { Box, Card, CardContent, Container, Grid, Stack, Typography } from '@mui/material';
+import { Box, Card, CardContent, Container, Grid, Link, Stack, Typography } from '@mui/material';
 import Page from '../components/Page';
 import Navbar from '../layouts/Navbar';
 import Footer from '../layouts/Footer';
 import CustomCard from '../components/CustomCard';
-import CustomButton from '../components/CustomButton';
+import CustomAccordion from '../components/CustomAccordion';
 
 export default function Home() {
   return (
-    <Page title="Eat Simple. Talk Possible.">
+    <Page title="Food Delivery .Within Building. Group Chat.">
       <Navbar />
       <Stack
         sx={{
@@ -20,12 +20,24 @@ export default function Home() {
         <Container>
           <Grid container alignItems="center" justifyContent="center" pt={15} pb={10}>
             <Grid item xs={12} md={6} textAlign={{ xs: 'center', md: 'left' }} order={{ xs: 2, md: 1 }}>
-              <Typography variant="h1">Eat Simple.</Typography>
-              <Typography variant="h1">Talk Possible.</Typography>
+              <Typography variant="h2">Food Delivery.</Typography>
+              <Typography variant="h2">Within Building.*</Typography>
+              <Typography variant="h2">Group Chat.</Typography>
               <Stack direction="row" justifyContent={{ xs: 'center', md: 'left' }} spacing={2} mt={5}>
-                <CustomButton img="google-play.png" subtitle="Get it on" title="Google Play" />
-                <CustomButton img="apple.png" subtitle="Download on the" title="App Store" />
+                <Link
+                  href="https://play.google.com/store/apps/details?id=com.gojek.app&hl=id"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="/static/badges/GooglePlay.svg" alt="Download di Google Play" width={150} />
+                </Link>
+                {/* <Link href="https://apps.apple.com/id/app/gojek/id944875099?l=id" target="_blank" rel="noreferrer">
+                  <img src="/static/badges/AppStore.svg" alt="Download di Google Play" width={150} />
+                </Link> */}
               </Stack>
+              <Typography variant="body2" mt={5}>
+                * Baru melayani gedung The Tower - by Alam Sutera, Jakarta.
+              </Typography>
             </Grid>
             <Grid item xs={12} sm={8} md={6} order={{ xs: 1, md: 2 }}>
               <img
@@ -39,44 +51,40 @@ export default function Home() {
       </Stack>
       <Container sx={{ pt: 10 }}>
         <Typography variant="h3" align="center" gutterBottom>
-          Why order from us?
+          Memudahkan Warga Perkantoran
         </Typography>
         <Typography color="text.secondary" align="center">
-          There are several reasons why you should order through our application. <br />
-          Here are some of the benefits you can get:
+          Berikut beberapa kemudahan yang bisa kamu dapatkan:
         </Typography>
         <Grid container spacing={3} mt={0}>
           <Grid item xs={12} md={4}>
             <CustomCard
               src="https://i.gojekapi.com/darkroom/gofood-id/v2/images/uploads/c5f6714a-ede0-48a5-88ab-9b3a4ce40fdf_why-gofood-delivery.png?auto=format"
-              title="Easy Ordering"
-              description="You can easily find the product or service you want, add it to your shopping cart, and make payments quickly and securely."
+              title="Kirim ke Mejamu"
+              description="Kamu hanya duduk manis, kurir kami akan mengirim pesanan langsung ke mejamu dengan cepat & efisien."
             />
           </Grid>
           <Grid item xs={12} md={4}>
             <CustomCard
               src="https://i.gojekapi.com/darkroom/gofood-id/v2/images/uploads/6bf66475-00fc-4a41-92f3-65fc37e5eddd_why-gofood-deals.png?auto=format"
-              title="Wider Choice"
-              description="You can explore a wider selection and compare different options before making a buying decision."
+              title="Jual/Beli Sekaligus"
+              description="Kamu dapat menjual dan membeli makanan atau minuman dengan pengguna lainnya dalam satu langkah."
             />
           </Grid>
           <Grid item xs={12} md={4}>
             <CustomCard
               src="https://i.gojekapi.com/darkroom/gofood-id/v2/images/uploads/80cb711b-d5c1-4c1e-a1a2-92069eb0a859_why-gofood-order.png?auto=format"
-              title="Special  Discounts"
-              description="You can take advantage of this opportunity to get more affordable prices or other additional benefits."
+              title="Group Chat"
+              description="Kamu dapat berkomunikasi dengan penjual atau pembeli lainnya dalam satu ruang percakapan yang terpusat."
             />
           </Grid>
         </Grid>
       </Container>
       <Container sx={{ pt: 10, mb: 10 }}>
-        {/* <Typography variant="h3" align="center" mb={3}>
-          Features
-        </Typography> */}
         <Grid container alignItems="center" spacing={3} mb={3}>
           <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
             <Typography variant="h3" gutterBottom>
-              Order Food
+              Order 1 Klik
             </Typography>
             <Typography>
               Fitur ini memungkinkan pengguna untuk memesan makanan dari restoran atau penjual makanan yang terdaftar
@@ -103,7 +111,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="h3" gutterBottom>
-              Sell Food
+              Bayar Masih Manual
             </Typography>
             <Typography>
               Fitur ini memungkinkan pemilik restoran atau penjual makanan untuk memasarkan dan menjual produk makanan
@@ -116,7 +124,7 @@ export default function Home() {
         <Grid container alignItems="center" spacing={3} mb={3}>
           <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
             <Typography variant="h3" gutterBottom>
-              Talks (Open & by Topics)
+              Group Chat per Topik
             </Typography>
             <Typography>
               Fitur ini memungkinkan pengguna untuk berpartisipasi dalam percakapan yang terfokus pada topik tertentu
@@ -133,6 +141,9 @@ export default function Home() {
             />
           </Grid>
         </Grid>
+        <Container sx={{ pt: 10, mb: 10 }}>
+          <CustomAccordion />
+        </Container>
         <Card
           sx={{
             mt: 10,
@@ -145,8 +156,16 @@ export default function Home() {
               Download aplikasi CeploX sekarang!
             </Typography>
             <Stack direction="row" justifyContent={{ xs: 'center', md: 'left' }} spacing={{ xs: 1, md: 2 }} mt={2}>
-              <CustomButton img="google-play.png" subtitle="Get it on" title="Google Play" />
-              <CustomButton img="apple.png" subtitle="Download on the" title="App Store" />
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.gojek.app&hl=id"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="/static/badges/GooglePlay.svg" alt="Download di Google Play" width={150} />
+              </Link>
+              {/* <Link href="https://apps.apple.com/id/app/gojek/id944875099?l=id" target="_blank" rel="noreferrer">
+                <img src="/static/badges/AppStore.svg" alt="Download di Google Play" width={150} />
+              </Link> */}
             </Stack>
             <Box
               sx={{

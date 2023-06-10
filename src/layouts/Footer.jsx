@@ -1,5 +1,6 @@
-import { Box, Link, Container, Divider, Grid, Stack, Typography, IconButton, Tooltip } from '@mui/material';
-import { FacebookRounded, Instagram, Twitter } from '@mui/icons-material';
+import { Box, Link, Container, Divider, Grid, Stack, Typography } from '@mui/material';
+// import { FacebookRounded, Instagram, Twitter } from '@mui/icons-material';
+import { Link as RouterLink } from 'react-router-dom';
 import Logo from '../components/Logo';
 
 export default function Footer() {
@@ -9,46 +10,49 @@ export default function Footer() {
         <Grid container spacing={{ xs: 5, md: 3 }} pb={5}>
           <Grid item xs={12} md={3}>
             <Logo white />
-            <Typography mt={2.2}>Eat Simple. Talk Possible.</Typography>
+            <Typography variant="body2" mt={2.2}>
+              Food Delivery.
+              <br />
+              Within Building.
+              <br />
+              Group Chat.
+            </Typography>
           </Grid>
           <Grid item xs={6} sm={4} md={3}>
-            <Typography variant="h6" mb={2}>
-              Menu
-            </Typography>
             <Stack spacing={1}>
-              <Link href="#" color="inherit" underline="none">
+              <Link component={RouterLink} to="" color="inherit" underline="none">
                 Home
               </Link>
-              <Link href="#" color="inherit" underline="none">
-                Features
+              <Link component={RouterLink} to="" color="inherit" underline="none">
+                Fitur
               </Link>
-              <Link href="#" color="inherit" underline="none">
+              <Link component={RouterLink} to="" color="inherit" underline="none">
                 FAQ
               </Link>
-              <Link href="#" color="inherit" underline="none">
+              <Link component={RouterLink} to="" color="inherit" underline="none">
                 Download
               </Link>
             </Stack>
           </Grid>
           <Grid item xs={6} sm={4} md={3}>
-            <Typography variant="h6" mb={2}>
-              About
-            </Typography>
             <Stack spacing={1}>
-              <Link href="#" color="inherit" underline="none">
-                Privacy Policy
+              <Link component={RouterLink} to="" color="inherit" underline="none">
+                Tentang Kami
               </Link>
-              <Link href="#" color="inherit" underline="none">
-                Terms & Condition
+              <Link component={RouterLink} to="" color="inherit" underline="none">
+                Kontak Kami
               </Link>
             </Stack>
           </Grid>
           <Grid item xs={6} sm={4} md={3}>
-            <Typography variant="h6" mb={1}>
-              Social Media
-            </Typography>
-            <Stack direction="row" spacing={1}>
-              <Tooltip title="Instagram">
+            <Stack spacing={1}>
+              <Link component={RouterLink} to="privacy-policy" color="inherit" underline="none">
+                Kebijakan Privasi
+              </Link>
+              <Link component={RouterLink} to="terms-condition" color="inherit" underline="none">
+                Syarat & Ketentuan
+              </Link>
+              {/* <Tooltip title="Instagram">
                 <IconButton>
                   <Instagram />
                 </IconButton>
@@ -62,7 +66,7 @@ export default function Footer() {
                 <IconButton>
                   <Twitter />
                 </IconButton>
-              </Tooltip>
+              </Tooltip> */}
             </Stack>
           </Grid>
         </Grid>
