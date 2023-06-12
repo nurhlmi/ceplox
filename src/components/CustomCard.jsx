@@ -9,7 +9,7 @@ const CustomCard = (props) => {
           <img src={src} alt="Illustration" width="200" />
           <Typography variant="h4">{title}</Typography>
         </Stack>
-        <Typography color="text.secondary" mt={2}>
+        <Typography variant="body2" color="text.secondary" mt={2}>
           {description}
         </Typography>
       </CardContent>

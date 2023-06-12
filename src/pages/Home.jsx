@@ -10,6 +10,7 @@ export default function Home() {
     <Page title="Food Delivery .Within Building. Group Chat.">
       <Navbar />
       <Stack
+        id="home"
         sx={{
           color: '#fff',
           //  background: '#185a9d',
@@ -49,7 +50,7 @@ export default function Home() {
           </Grid>
         </Container>
       </Stack>
-      <Container sx={{ pt: 10 }}>
+      <Container sx={{ pt: 12 }} id="feature">
         <Typography variant="h3" align="center" gutterBottom>
           Memudahkan Warga Perkantoran
         </Typography>
@@ -59,34 +60,34 @@ export default function Home() {
         <Grid container spacing={3} mt={0}>
           <Grid item xs={12} md={4}>
             <CustomCard
-              src="https://i.gojekapi.com/darkroom/gofood-id/v2/images/uploads/c5f6714a-ede0-48a5-88ab-9b3a4ce40fdf_why-gofood-delivery.png?auto=format"
+              src="/static/illustrations/delivery.svg"
               title="Kirim ke Mejamu"
-              description="Kamu hanya duduk manis, kurir kami akan mengirim pesanan langsung ke mejamu dengan cepat & efisien."
+              description="Kamu hanya duduk manis, kurir kami akan mengirim pesanan langsung ke mejamu dengan cepat."
             />
           </Grid>
           <Grid item xs={12} md={4}>
             <CustomCard
-              src="https://i.gojekapi.com/darkroom/gofood-id/v2/images/uploads/6bf66475-00fc-4a41-92f3-65fc37e5eddd_why-gofood-deals.png?auto=format"
+              src="/static/illustrations/order.svg"
               title="Jual/Beli Sekaligus"
               description="Kamu dapat menjual dan membeli makanan atau minuman dengan pengguna lainnya dalam satu langkah."
             />
           </Grid>
           <Grid item xs={12} md={4}>
             <CustomCard
-              src="https://i.gojekapi.com/darkroom/gofood-id/v2/images/uploads/80cb711b-d5c1-4c1e-a1a2-92069eb0a859_why-gofood-order.png?auto=format"
+              src="/static/illustrations/feed.svg"
               title="Group Chat"
               description="Kamu dapat berkomunikasi dengan penjual atau pembeli lainnya dalam satu ruang percakapan yang terpusat."
             />
           </Grid>
         </Grid>
       </Container>
-      <Container sx={{ pt: 10, mb: 10 }}>
+      <Container sx={{ pt: 12 }}>
         <Grid container alignItems="center" spacing={3} mb={3}>
           <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
             <Typography variant="h3" gutterBottom>
               Order 1 Klik
             </Typography>
-            <Typography>
+            <Typography color="text.secondary">
               Fitur ini memungkinkan pengguna untuk memesan makanan dari restoran atau penjual makanan yang terdaftar
               dalam aplikasi. Pengguna dapat menjelajahi menu, memilih makanan yang diinginkan, menambahkannya ke
               keranjang belanja, dan memproses pembayaran melalui aplikasi. Setelah itu, pesanan akan dikirim ke
@@ -94,26 +95,18 @@ export default function Home() {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={8} md={6} order={{ xs: 1, md: 2 }}>
-            <img
-              src="https://mockuuups-web.ams3.cdn.digitaloceanspaces.com/web/images/header-iphone-mockups-2.png"
-              alt="Download on the App Store"
-              width="100%"
-            />
+            <img src="/static/illustrations/select.svg" alt="Order" width="100%" />
           </Grid>
         </Grid>
         <Grid container alignItems="center" spacing={3} mb={3}>
           <Grid item xs={12} sm={8} md={6}>
-            <img
-              src="https://mockuuups-web.ams3.cdn.digitaloceanspaces.com/web/images/header-iphone-mockups-2.png"
-              alt="Download on the App Store"
-              width="100%"
-            />
+            <img src="/static/illustrations/wallet.svg" alt="Order" width="100%" />
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="h3" gutterBottom>
               Bayar Masih Manual
             </Typography>
-            <Typography>
+            <Typography color="text.secondary">
               Fitur ini memungkinkan pemilik restoran atau penjual makanan untuk memasarkan dan menjual produk makanan
               mereka melalui aplikasi. Mereka dapat membuat profil bisnis, mengunggah menu makanan, mengatur harga,
               mengelola persediaan, dan menerima pesanan dari pelanggan. Fitur ini memberikan platform bagi pemilik
@@ -126,7 +119,7 @@ export default function Home() {
             <Typography variant="h3" gutterBottom>
               Group Chat per Topik
             </Typography>
-            <Typography>
+            <Typography color="text.secondary">
               Fitur ini memungkinkan pengguna untuk berpartisipasi dalam percakapan yang terfokus pada topik tertentu
               yang berkaitan dengan makanan. Misalnya, topik seperti "Resep dan Masakan Rumahan," "Restoran Terbaik di
               Kota," atau "Makanan Sehat dan Gizi." Pengguna dapat bergabung dengan talks yang menarik bagi mereka,
@@ -134,19 +127,17 @@ export default function Home() {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={8} md={6} order={{ xs: 1, md: 2 }}>
-            <img
-              src="https://mockuuups-web.ams3.cdn.digitaloceanspaces.com/web/images/header-iphone-mockups-2.png"
-              alt="Download on the App Store"
-              width="100%"
-            />
+            <img src="/static/illustrations/chat.svg" alt="Order" width="100%" />
           </Grid>
         </Grid>
-        <Container sx={{ pt: 10, mb: 10 }}>
-          <CustomAccordion />
-        </Container>
+      </Container>
+      <Container sx={{ pt: 12 }} id="faq">
+        <CustomAccordion />
+      </Container>
+      <Container sx={{ pt: 12 }} id="download">
         <Card
           sx={{
-            mt: 10,
+            mb: 10,
             color: '#fff',
             background: 'linear-gradient(to right, #43cea2, #185a9d)',
           }}

@@ -8,13 +8,13 @@ import Page from '../components/Page';
 // ----------------------------------------------------------------------
 
 const ContentStyle = styled('div')(({ theme }) => ({
-  maxWidth: 480,
+  maxWidth: 520,
   margin: 'auto',
   minHeight: '100vh',
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',
-  padding: theme.spacing(12, 0)
+  padding: theme.spacing(12, 0),
 }));
 
 // ----------------------------------------------------------------------
@@ -24,23 +24,18 @@ export default function Page404() {
     <Page title="404 Page Not Found">
       <Container>
         <ContentStyle sx={{ textAlign: 'center', alignItems: 'center' }}>
+          <Box component="img" src="/static/illustrations/404.svg" sx={{ height: 300, mx: 'auto' }} />
+
           <Typography variant="h3" paragraph>
-            Sorry, page not found!
+            Maaf, halaman tidak ditemukan!
           </Typography>
 
-          <Typography sx={{ color: 'text.secondary' }}>
-            Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve mistyped the URL? Be
-            sure to check your spelling.
+          <Typography sx={{ color: 'text.secondary' }} mb={3}>
+            Kami tidak dapat menemukan halaman yang Anda cari. Pastikan untuk memeriksa ejaan Anda.
           </Typography>
-
-          <Box
-            component="img"
-            src="/static/illustrations/illustration_404.svg"
-            sx={{ height: 260, mx: 'auto', my: { xs: 5, sm: 10 } }}
-          />
 
           <Button to="/" size="large" variant="contained" component={RouterLink}>
-            Go to Home
+            Kembali
           </Button>
         </ContentStyle>
       </Container>
